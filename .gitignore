@@ -17,3 +17,4 @@
 .prettierignore
 
 node_modules/
+config.js
