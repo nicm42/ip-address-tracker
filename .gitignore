@@ -17,4 +17,6 @@
 .prettierignore
 
 node_modules/
+dist/
+webpack.dev.js
 config.js
