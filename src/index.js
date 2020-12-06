@@ -1,7 +1,8 @@
 import './styles.scss';
 import {getData} from './getData';
 
-const ip = '8.8.8.8';
+//const ip = '8.8.8.8';
+const ip = '';
 
 getData(ip)
   //.then(data => console.log(data));
