@@ -7,4 +7,13 @@ html {
 body {
   font-size: $fontSize;
   font-family: $font;
+  background-color: blue; //TODO update this
+  background-image: url(images/pattern-bg.png);
+  background-size: 100% 33%;
+  background-repeat: no-repeat;
+}
+
+//TODO move this later
+#map {
+  height: 200px;
 }
