@@ -32,10 +32,15 @@ function outputData(data) {
   console.log('UTC ' + data.location.timezone);
   console.log(data.isp);
   console.log(location.lat, location.lng);
+  showMap(location.lat, location.lng);
 }
 
-const map = L.map('map').setView([51.505, -0.09], 13);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-L.marker([51.5, -0.09]).addTo(map);
+function showMap(lat, lng) {
+  const map = L.map('map').setView([lat, lng], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  L.marker([lat, lng]).addTo(map);
+}
+
+showMap(52.374990, -1.556640);
