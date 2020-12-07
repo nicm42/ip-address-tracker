@@ -23,11 +23,25 @@
     <button class="ipSearch-submit" name="ipSearch-submit" type="submit"><img src="images/icon-arrow.svg" alt="Submit"></button>
   </form>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
+  <div class="ipResult">
+    <div class="ipResult-address">
+      <div class="ipResult-header">IP Address</div>
+      <div class="ipResult-data" id="addressData"></div>
+    </div>
+    <div class="ipResult-location">
+      <div class="ipResult-header">Location</div>
+      <div class="ipResult-data" id="locationData"></div>
+    </div>
+    <div class="ipResult-timezone">
+      <div class="ipResult-header">Timezone</div>
+      <div class="ipResult-data" id="timezoneData"></div>
+    </div>
+    <div class="ipResult-isp">
+      <div class="ipResult-header">ISP</div>
+      <div class="ipResult-data" id="ispData"></div>
+    </div>    
+    
+  </div>
 
   <div id="map"></div>
   
