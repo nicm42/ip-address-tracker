@@ -1,5 +1,7 @@
 import './styles.scss';
 import {getData} from './getData';
+import {showMap} from './showMap';
+
 import L from 'leaflet';
 L.Icon.Default.imagePath = 'node_modules/leaflet/dist/images/';
 import 'leaflet/dist/leaflet.css';
@@ -35,12 +37,5 @@ function outputData(data) {
   showMap(location.lat, location.lng);
 }
 
-function showMap(lat, lng) {
-  const map = L.map('map').setView([lat, lng], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-  L.marker([lat, lng]).addTo(map);
-}
-
+//To test if not using the API
 showMap(52.374990, -1.556640);
