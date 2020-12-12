@@ -1,6 +1,7 @@
 #map {
-  position: relative;
-  top: -19.5vh; //TODO why does this work?
+  position: absolute;
+  top: 33vh;
+  width: 100vw;
   height: 68vh;
   z-index: -1;
 }
