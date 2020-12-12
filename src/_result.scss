@@ -4,8 +4,31 @@
   border-radius: 1em;
   text-align: center;
 
+  @include breakpoint-up(medium) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    padding: 2em;
+    text-align: left;
+  }
+
   &-section:not(:last-of-type) {
     margin-bottom: 0.75em;
+    
+    @include breakpoint-up(medium) {
+      position: relative;
+      margin-bottom: 0;
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: $colourLight;
+      }
+    }
   }
 
   &-header {
@@ -17,6 +40,11 @@
   &-data {
     font-size: 0.85rem;
     font-weight: 700;
+
+    @include breakpoint-up(medium) {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
   }
 
 }
