@@ -1,0 +1,30 @@
+.search {
+  display: grid;
+  grid-template-columns: 1fr 2em;
+  gap: 0;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  &-input {
+    padding: 0.5em 1em;
+    border: none;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    font-size: 0.85rem;
+  }
+
+  &-submit {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 2em;
+    width: 2em;
+    background-color: $colourDark;
+    border: none;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    cursor: pointer;
+  }
+
+}
