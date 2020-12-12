@@ -5,10 +5,11 @@ html {
 }
 
 body {
-  font-size: $fontSize;
-  font-family: $font;
   background-color: blue; //TODO update this
   background-image: url(images/pattern-bg.png);
   background-size: 100% 33vh;
   background-repeat: no-repeat;
+  font-size: $fontSize;
+  font-family: $font;
+  color: $colourDark;
 }

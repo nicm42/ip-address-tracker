@@ -1,0 +1,22 @@
+.result {
+  padding: 1em;
+  background: white;
+  border-radius: 1em;
+  text-align: center;
+
+  &-section:not(:last-of-type) {
+    margin-bottom: 0.75em;
+  }
+
+  &-header {
+    color: $colourLight;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  &-data {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+}
