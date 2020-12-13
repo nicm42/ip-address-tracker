@@ -10,6 +10,9 @@ search.addEventListener('submit', function(event) {
   ip = document.querySelector('.search-input').value;
   //console.log('IP is ' + ip);
   //findData(ip, 'typed');
+  //To test if not using the API
+  showData('0.0.0.0', ['London','England',''], 'UTC +00:00', 'My ISP');
+  showMap(0, 0, 'typed');
 })
 
 
@@ -21,5 +24,3 @@ import {showMap} from './showMap';
 showData('192.212.174.101', ['Brooklyn','NY','10001'], 'UTC -05:00', 'SpaceX Starlink');
 showMap(52.374990, -1.556640, 'initial');
 
-showData('0.0.0.0', ['London','England',''], 'UTC +00:00', 'My ISP');
-showMap(0, 0, 'typed');
