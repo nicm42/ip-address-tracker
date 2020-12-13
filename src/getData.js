@@ -4,8 +4,9 @@ const myKey = config.myKey;
 export async function getData(ip) {
   console.log(ip);
   try {
-    const request = await fetch('https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v1?' + 'apiKey=' + myKey + '&ipAddress=' + ip);
-    //const request = await fetch('https://cors-anywhere.herokuapp.com/https://geo.ipify.org/api/v1?' + 'apiKey=' + myKey);
+    const link = 'https://geo.ipify.org/api/v1?' + 'apiKey=' + myKey + '&ipAddress=' + ip;
+    //console.log(link);
+    const request = await fetch(link);
     const data = await request.json();
     return data;
   } catch (error) {
