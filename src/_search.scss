@@ -12,7 +12,7 @@
     margin-bottom: 2em;
   }
 
-  &-input {
+  &__input {
     padding: 0.5em 1em;
     border: none;
     border-top-left-radius: 0.5em;
@@ -20,7 +20,7 @@
     font-size: 0.85rem;
   }
 
-  &-submit {
+  &__submit {
     display: grid;
     justify-items: center;
     align-items: center;
