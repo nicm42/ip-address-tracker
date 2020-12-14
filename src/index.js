@@ -7,7 +7,7 @@ let ip = '';
 const search = document.querySelector('.search');
 search.addEventListener('submit', function(event) {
   event.preventDefault();
-  ip = document.querySelector('.search-input').value;
+  ip = document.querySelector('.search__input').value;
   //console.log('IP is ' + ip);
   //findData(ip, 'typed');
   //To test if not using the API
