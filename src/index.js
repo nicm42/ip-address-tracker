@@ -12,7 +12,7 @@ search.addEventListener('submit', function(event) {
   //findData(ip, 'typed');
   //To test if not using the API
   showData('0.0.0.0', ['London','England',''], 'UTC +00:00', 'My ISP');
-  showMap(0, 0, 'typed');
+  showMap(-33.868820, 151.209290);
 })
 
 
@@ -22,5 +22,5 @@ import {showData} from './showData';
 import {showMap} from './showMap';
 
 showData('192.212.174.101', ['Brooklyn','NY','10001'], 'UTC -05:00', 'SpaceX Starlink');
-showMap(52.374990, -1.556640, 'initial');
+showMap(52.374990, -1.556640);
 

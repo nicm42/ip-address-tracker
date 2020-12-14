@@ -1,7 +1,7 @@
 import {showMap} from './showMap';
 import {showData} from './showData';
 
-export function processData(data, when) {
+export function processData(data) {
   //If we're in the USA then convert region to two letters
   let region = data.location.region;
   if(data.location.country === 'US') {
@@ -17,5 +17,5 @@ export function processData(data, when) {
   const timezone = `UTC ${data.location.timezone}`;
   const isp = data.isp;
   showData(data.ip, place, timezone, isp);
-  showMap(data.location.lat, data.location.lng, when);
+  showMap(data.location.lat, data.location.lng);
 }
