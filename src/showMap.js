@@ -20,8 +20,8 @@ map.zoomControl.setPosition('bottomleft'); //so it's not under the results
 console.log('adding map')
 
 export function showMap(lat, lng) {
-  console.log(map);
-  console.log(lat, lng);
+  //console.log(map);
+  //console.log(lat, lng);
   map.setView([lat, lng], 13);
   OpenStreetMap.addTo(map);
   marker.setLatLng([lat, lng]);
