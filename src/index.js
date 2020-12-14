@@ -3,7 +3,7 @@ import {findData} from './findData';
 
 let ip = '';
 let domain = '';
-//findData(ip, '');
+//findData(ip, domain);
 
 const search = document.querySelector('.search');
 search.addEventListener('submit', function(event) {
@@ -17,9 +17,9 @@ search.addEventListener('submit', function(event) {
     domain = '';
   } else {
     domain = result;
-    ip = '';
+
   }
-  //console.log('IP is ' + ip);
+  ////console.log('IP is ' + ip);
   //findData(ip, domain);
   //TODO comment out
   //To test if not using the API

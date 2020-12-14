@@ -7,6 +7,8 @@ export function findData(ip, domain) {
     //.then(data => console.log(data));
     .then(data => {
       //console.log(data);
-      processData(data);
+      if(data) {
+        processData(data);
+      }
     });
   }
