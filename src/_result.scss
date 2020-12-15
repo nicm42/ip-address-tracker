@@ -10,9 +10,11 @@
   @include breakpoint-up(medium) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    gap: 5em;
+    max-width: 61em;
     padding: 2em;
     text-align: left;
+    margin: 0 auto;
   }
 
   &__section:not(:last-of-type) {
@@ -25,11 +27,12 @@
       &::after {
         position: absolute;
         content: '';
-        right: 0;
-        top: 0;
-        bottom: 0;
+        right: -2.5em;
+        top: 0.5em;
+        bottom: 0.5em;
         width: 1px;
         background-color: $colourLight;
+        opacity: 0.5;
       }
     }
   }
@@ -41,6 +44,9 @@
     letter-spacing: 0.2em;
     line-height: 2;
     text-transform: uppercase;
+    @include breakpoint-up(medium) {
+      font-size: 0.7em;
+    }
   }
 
   &__data {
@@ -48,7 +54,7 @@
     font-weight: 500;
 
     @include breakpoint-up(medium) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 
