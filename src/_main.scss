@@ -1,5 +1,9 @@
 .container {
   padding: 1.2em;
+
+  @include breakpoint-up(medium) {
+    padding: 0.5em;
+  }
 }
 
 h1 {
@@ -10,7 +14,7 @@ h1 {
   text-align: center;
 
   @include breakpoint-up(medium) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
