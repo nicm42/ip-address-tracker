@@ -1,8 +1,10 @@
 .result {
+  position: relative;  //To make sure it goes above the absolutely positioned map
   padding: 1em;
   background: white;
   border-radius: 1em;
   text-align: center;
+  z-index: 999;
 
   @include breakpoint-up(medium) {
     display: grid;

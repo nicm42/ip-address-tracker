@@ -17,7 +17,7 @@ const marker = L.marker([0, 0], {icon: mapIcon}).addTo(map);
 
 map.zoomControl.setPosition('bottomleft'); //so it's not under the results
 
-console.log('adding map')
+//console.log('adding map')
 
 export function showMap(lat, lng) {
   //console.log(map);
