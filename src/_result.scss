@@ -52,6 +52,7 @@
   &__data {
     font-size: 1.2rem;
     font-weight: 500;
+    line-height: 1.2;
 
     @include breakpoint-up(medium) {
       font-size: 1.6rem;
