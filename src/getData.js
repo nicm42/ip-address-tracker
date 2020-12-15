@@ -6,12 +6,12 @@ export async function getData(ip, domain) {
   //console.log(ip);
   try {
     const link = 'https://geo.ipify.org/api/v1?' + 'apiKey=' + myKey + '&ipAddress=' + ip + '&domain=' + domain;
-    console.log(link);
+    //console.log(link);
     const request = await fetch(link);
-    console.log(request)
+    //console.log(request)
     if(request.ok) {
       const data = await request.json();
-      console.log(data);
+      //console.log(data);
       return data;
     } else {
       throw new Error(request.statusText);

@@ -4,10 +4,10 @@ import markerImage from "./images/icon-location.svg";
 
 const map = L.map('map');
 
-const OpenStreetMap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-});
+}).addTo(map);
 
 const mapIcon = L.icon({
   iconUrl: markerImage
@@ -23,6 +23,6 @@ export function showMap(lat, lng) {
   //console.log(map);
   //console.log(lat, lng);
   map.setView([lat, lng], 13);
-  OpenStreetMap.addTo(map);
+  //OpenStreetMap.addTo(map);
   marker.setLatLng([lat, lng]);
 }
