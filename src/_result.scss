@@ -9,7 +9,19 @@
 
   @include breakpoint-up(medium) {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 1em;
+    grid-column-gap: 5em;
+    padding: 2em;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  @include breakpoint-up(large) {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 5em;
     max-width: 61em;
     padding: 2em;
@@ -17,12 +29,43 @@
     margin: 0 auto;
   }
 
-  &__section:not(:last-of-type) {
-    margin-bottom: 1em;
+  &__section {
     
     @include breakpoint-up(medium) {
       position: relative;
-      margin-bottom: 0;
+    }
+  }
+
+  &__section:nth-child(odd) {
+
+    @include breakpoint-up(medium) {
+      justify-self: end;
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: -2.5em;
+        top: 0.5em;
+        bottom: 0.5em;
+        width: 1px;
+        background-color: $colourLight;
+        opacity: 0.5;        
+      }
+    }
+
+    @include breakpoint-up(large) {
+      justify-self: start;
+    }
+  }
+
+  &__section:not(:last-of-type) {
+    margin-bottom: 1em;
+  }
+    
+  //Already added to first & third, so just needs adding to second now
+  &__section:nth-child(2) {
+
+    @include breakpoint-up(large) {
 
       &::after {
         position: absolute;
@@ -44,7 +87,7 @@
     letter-spacing: 0.2em;
     line-height: 2;
     text-transform: uppercase;
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       font-size: 0.7em;
     }
   }
@@ -54,7 +97,7 @@
     font-weight: 500;
     line-height: 1.2;
 
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(large) {
       font-size: 1.6rem;
     }
   }
