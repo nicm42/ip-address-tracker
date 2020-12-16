@@ -22,11 +22,11 @@ search.addEventListener('submit', function(event) {
 
   }
   ////console.log('IP is ' + ip);
-  findData(ip, domain);
+  //findData(ip, domain);
   //TODO comment out
   //To test if not using the API
-  //showData('0.0.0.0', ['London','England',''], 'UTC +00:00', 'My ISP');
-  //showMap(-33.868820, 151.209290);
+  showData('0.0.0.0', ['London','England',''], 'UTC +00:00', 'My ISP');
+  showMap(-33.868820, 151.209290);
 })
 
 

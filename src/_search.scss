@@ -20,6 +20,12 @@ $borderRadius: 1em;
     border: none;
     border-top-left-radius: $borderRadius;
     border-bottom-left-radius: $borderRadius;
+
+    &:focus {
+      //Chrome's default focus state look great, but Firefox's is blue, so it doesn't stand out against the background image
+      //So we'll set it by hand for the input box and submit buttons, to make sure it's always seen
+      outline: 2px solid $colourDark;
+    }
   }
 
   &__submit {
@@ -33,6 +39,10 @@ $borderRadius: 1em;
     border-top-right-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     cursor: pointer;
+
+    &:focus {
+      outline: 2px solid $colourLight;
+    }
   }
 
 }
