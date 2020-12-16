@@ -14,9 +14,19 @@ export async function getData(ip, domain) {
       //console.log(data);
       return data;
     } else {
-      throw new Error(request.statusText);
+      let errorToSend = request.statusText;
+      if(request.status === 422) {
+        //The other status texts are pretty self-explanatory, but not this one
+        errorToSend = 'The IP address or domain does not exist.';
+      }
+      throw new Error(errorToSend);
     }
   } catch (error) {
-    console.log(error); //TODO add error text to page somewhere
+    //console.log(error);
+    const errorMessage = document.querySelector('.error')
+    errorMessage.innerHTML = error;
+    errorMessage.style.display = 'block';
+    const resultData = document.querySelectorAll('.result__data');
+    resultData.forEach(result => result.innerHTML = '');
   }
 }
