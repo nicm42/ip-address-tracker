@@ -1,9 +1,10 @@
 .search {
+  position: relative; //To make sure this doesn't go behind the map
   display: grid;
   grid-template-columns: 1fr $buttonWidth;
-  gap: 0;
   margin-top: 1.5em;
   margin-bottom: 1em;
+  z-index: 999;
 
   @include breakpoint-up(small) {
     max-width: 31em;
@@ -13,8 +14,10 @@
   }
 
   &__input {
+    appearance: none;  //To stop the search type making the corners very rounded
     padding: 0.85em 1.6em;
-    border: none;
+    border-color: transparent;
+    border-radius: 0;  //To make sure it's not rounded on the right
     border-top-left-radius: $borderRadius;
     border-bottom-left-radius: $borderRadius;
 
@@ -26,13 +29,14 @@
   }
 
   &__submit {
+    position: relative;
     display: grid;
     justify-items: center;
     align-items: center;
-    height: 3.2em;
+    left: -0.1em;  //To make sure there's no gap between button and input
     width: $buttonWidth;
     background-color: $colourDark;
-    border: none;
+    border-color: transparent;
     border-top-right-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     cursor: pointer;
