@@ -5,3 +5,14 @@ $breakpoints-up: ("small": "23.5em", "medium": "28em", "large": "56em");
     @content;
   }
 }
+
+@mixin line-after {
+  position: absolute;
+  content: '';
+  right: -2.5em;
+  top: 0.5em;
+  bottom: 0.5em;
+  width: 1px;
+  background-color: $colourLight;
+  opacity: 0.5;
+}

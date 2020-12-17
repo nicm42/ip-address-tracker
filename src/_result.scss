@@ -1,5 +1,5 @@
 .result {
-  position: relative;  //To make sure it goes above the absolutely positioned map
+  position: relative; //To make sure it goes above the absolutely positioned map
   padding: 1em;
   background: white;
   border-radius: 1em;
@@ -19,63 +19,47 @@
   }
 
   @include breakpoint-up(large) {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     gap: 5em;
     max-width: 61em;
-    padding: 2em;
-    text-align: left;
-    margin: 0 auto;
   }
 
   &__section {
-    
-    @include breakpoint-up(medium) {
-      position: relative;
-    }
-  }
+    position: relative;
 
-  &__section:nth-child(odd) {
+    &:nth-child(odd) {
 
-    @include breakpoint-up(medium) {
-      justify-self: end;
+      @include breakpoint-up(medium) {
+        justify-self: end;
 
-      &::after {
-        position: absolute;
-        content: '';
-        right: -2.5em;
-        top: 0.5em;
-        bottom: 0.5em;
-        width: 1px;
-        background-color: $colourLight;
-        opacity: 0.5;        
+        &::after {
+          @include line-after;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        justify-self: start;
       }
     }
 
-    @include breakpoint-up(large) {
-      justify-self: start;
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+
+      @include breakpoint-up(medium) {
+        margin-bottom: 0;
+      }
+
     }
-  }
 
-  &__section:not(:last-of-type) {
-    margin-bottom: 1em;
-  }
-    
-  //Already added to first & third, so just needs adding to second now
-  &__section:nth-child(2) {
+    //Already added to first & third, so just needs adding to second now
+    &:nth-child(2) {
 
-    @include breakpoint-up(large) {
+      @include breakpoint-up(large) {
 
-      &::after {
-        position: absolute;
-        content: '';
-        right: -2.5em;
-        top: 0.5em;
-        bottom: 0.5em;
-        width: 1px;
-        background-color: $colourLight;
-        opacity: 0.5;
+        &::after {
+          @include line-after;
+        }
       }
     }
   }
@@ -87,6 +71,7 @@
     letter-spacing: 0.2em;
     line-height: 2;
     text-transform: uppercase;
+
     @include breakpoint-up(large) {
       font-size: 0.7em;
     }
