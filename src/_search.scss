@@ -20,8 +20,9 @@
     border-radius: 0;  //To make sure it's not rounded on the right
     border-top-left-radius: $borderRadius;
     border-bottom-left-radius: $borderRadius;
+    transition: outline 250ms linear;
 
-    &:focus {
+    &:hover, &:focus {
       //Chrome's default focus state look great, but Firefox's is blue, so it doesn't stand out against the background image
       //So we'll set it by hand for the input box and submit buttons, to make sure it's always seen
       outline: 2px solid $colourDark;
@@ -40,6 +41,11 @@
     border-top-right-radius: $borderRadius;
     border-bottom-right-radius: $borderRadius;
     cursor: pointer;
+    transition: background-color 250ms linear;
+
+    &:hover {
+      background-color: adjust-color($colourDark, $lightness: 10%); //Faces the black a little without fading the white
+    }
 
     &:focus {
       outline: 2px solid $colourLight;
