@@ -18,7 +18,9 @@
 
 node_modules/
 dist/
+cypress/
 webpack.dev.js
 config.js
+cypress.json
 
 to do
