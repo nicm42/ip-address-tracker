@@ -5,7 +5,7 @@
   border-radius: $borderRadius;
   box-shadow: 2px 0px 6px 0px rgba(0, 0, 0, 0.5);
   text-align: center;
-  z-index: 999;
+  z-index: 100;
 
   @include breakpoint-up(medium) {
     display: grid;
