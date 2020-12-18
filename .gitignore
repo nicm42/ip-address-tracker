@@ -17,7 +17,6 @@
 .prettierignore
 
 node_modules/
-dist/
 cypress/
 webpack.dev.js
 config.js
