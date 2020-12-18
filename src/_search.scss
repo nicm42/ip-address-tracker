@@ -1,0 +1,55 @@
+.search {
+  position: relative; //To make sure this doesn't go behind the map
+  display: grid;
+  grid-template-columns: 1fr $buttonWidth;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  z-index: 999;
+
+  @include breakpoint-up(small) {
+    max-width: 31em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+  }
+
+  &__input {
+    appearance: none;  //To stop the search type making the corners very rounded
+    padding: 0.85em 1.6em;
+    border-color: transparent;
+    border-radius: 0;  //To make sure it's not rounded on the right
+    border-top-left-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    transition: outline 250ms linear;
+
+    &:hover, &:focus {
+      //Chrome's default focus state look great, but Firefox's is blue, so it doesn't stand out against the background image
+      //So we'll set it by hand for the input box and submit buttons, to make sure it's always seen
+      outline: 2px solid $colourDark;
+    }
+  }
+
+  &__submit {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    left: -0.1em;  //To make sure there's no gap between button and input
+    width: $buttonWidth;
+    background-color: $colourDark;
+    border-color: transparent;
+    border-top-right-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    cursor: pointer;
+    transition: background-color 250ms linear;
+
+    &:hover {
+      background-color: adjust-color($colourDark, $lightness: 10%); //Faces the black a little without fading the white
+    }
+
+    &:focus {
+      outline: 2px solid $colourLight;
+    }
+  }
+
+}

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: #5e84f0; //the light blue on the right of the background image
+  background-image: url(images/pattern-bg.png);
+  background-size: 100% 33vh;
+  background-repeat: no-repeat;
+  font-size: $fontSize;
+  font-family: $font;
+  color: $colourDark;
+}
