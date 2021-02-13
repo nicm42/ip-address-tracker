@@ -42,4 +42,4 @@ Project is: _finished_
 Design provided by [Frontend Mentor](https://www.frontendmentor.io/)
 
 ## Contact
-Created by [nim42](https://www.twitter.com/nicm42) - feel free to contact me!
+Created by [nim42](https://www.twitter.com/nicm4242) - feel free to contact me!
