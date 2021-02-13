@@ -17,7 +17,7 @@ I needed to practise using APIs so I found a Frontend Mentor project that requir
 Having learnt Webpack I then tried it out on this project. As well as splitting up my JS files, having finally discovered why you would do such a thing.
 
 ## Screenshots
-![Screenshot](https://raw.githubusercontent.com/nicm42/ip-address-tracker/develop/screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Technologies
 * HTML
