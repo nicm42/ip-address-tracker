@@ -5,6 +5,7 @@
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
+* [Learnings](#learnings)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
@@ -27,6 +28,10 @@ Having learnt Webpack I then tried it out on this project. As well as splitting 
 * [IP Geolocation API](https://geo.ipify.org/) for IP address/domain data
 * [LeafletJS](https://leafletjs.com/) for mapping the data
 * [OpenStreetMap](https://www.openstreetmap.org/#map=5/54.910/-3.432) to show the map
+
+## Learnings
+* Webpack
+* JavaScript async/await
 
 ## Setup
 To view this project visit the [demo](https://ipaddresstracker-nm.netlify.app/) or download the files and open index.html
